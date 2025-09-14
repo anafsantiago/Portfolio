@@ -1,0 +1,126 @@
+.experiencia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 40px 20px;
+  gap: 200px;
+  align-items: start;
+}
+
+.experiencia h1 {
+  font-size: 9rem;
+  line-height: 1;
+  color: #cccccc;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 326px;
+}
+
+.experiencia p {
+  color: #525252;
+}
+
+.experiencia-container h2 {
+  font-size: 1.125rem;
+  line-height: 1.11;
+  margin-bottom: 10px;
+}
+
+.experiencia-container p,
+.link-projeto {
+  font-size: 0.875rem;
+  line-height: 1.42;
+}
+
+.experiencia-descricao {
+  margin-bottom: 60px;
+  margin-top: 12px;
+}
+
+.experiencia-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  border: #ededed solid 1px;
+  margin-bottom: 20px;
+  padding: 20px;
+  column-gap: 40px;
+  position: relative;
+}
+
+.tecnologias {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tecnologias p {
+  color: #141414;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.tecnologias p:hover {
+  background-color: #ffcc49;
+}
+
+.experiencia-item::before {
+  content: "";
+  height: 20px;
+  width: 4px;
+  background-image: linear-gradient(to bottom, #ffcc49, #f0ad00);
+  position: absolute;
+  left: -5px;
+  top: 20px;
+}
+
+.link-projeto {
+  margin-top: 20px;
+  color: #f0ad00;
+  cursor: pointer;
+  font-weight: 800;
+  max-width: max-content;
+  position: relative;
+}
+
+.link-projeto::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 2px;
+  background-color: #f0ad00;
+  position: absolute;
+  bottom: -1px;
+}
+
+@media (max-width: 800px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .experiencia h1 {
+    color: #141414;
+  }
+
+  .experiencia h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+  }
+
+  .experiencia-descricao {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .experiencia-item {
+    grid-template-columns: 1fr;
+  }
+}

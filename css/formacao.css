@@ -1,0 +1,187 @@
+.formacao h1 {
+  font-size: 9rem;
+  line-height: 1;
+  color: #000000;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 270px;
+}
+
+.formacao h2 {
+  color: #ffffff;
+  font-size: 1.125rem;
+  line-height: 1.38;
+  margin: 10px 0px 50px 0px;
+}
+
+.formacao h3 {
+  color: #8f8f8f;
+  font-size: 0.875rem;
+  line-height: 1.42;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.palavra-quebra {
+  max-width: 10ch;
+}
+
+.formacao-grau {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  line-height: 1.42;
+  text-transform: uppercase;
+}
+
+.formacao-faculdade {
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  line-height: 1.11;
+  text-transform: uppercase;
+}
+
+.formacao-descricao {
+  color: #a3a3a3;
+}
+
+.formacao {
+  background-color: #141414;
+}
+
+.formacao-cursos {
+  display: flex;
+  gap: 30px;
+}
+
+.formacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 120px 20px;
+  gap: 200px;
+  position: relative;
+}
+
+.formacao-item {
+  background-color: #090909;
+  border-radius: 5px;
+  border: #000000 solid 1px;
+  padding: 20px;
+  flex: 1;
+  margin: 60px 0px;
+  position: relative;
+}
+
+.formacao-item::before {
+  content: "";
+  height: 20px;
+  width: 4px;
+  background-image: linear-gradient(to bottom, #ffcc49, #f0ad00);
+  position: absolute;
+  top: 50px;
+  left: -5px;
+}
+
+.paragrafo-curso-e-idioma {
+  color: #ffffff;
+  font-size: 1.125rem;
+  line-height: 1.11;
+}
+
+.paragrafo-nivel-hora {
+  color: #8f8f8f;
+  font-size: 1.125rem;
+  line-height: 1.11;
+}
+
+.cursos-extras {
+  margin-bottom: 20px;
+}
+
+#cursos-intensivos,
+#cursos-idiomas {
+  position: relative;
+}
+
+#cursos-intensivos h3::before,
+#cursos-idiomas h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+
+#cursos-intensivos h3::before {
+  background: url(../img/cursos.svg) no-repeat center center;
+}
+
+#cursos-idiomas h3::before {
+  background: url(../img/idiomas.svg) no-repeat center center;
+}
+
+.paragrafos-cursos-intensivos {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 0px 0px 60px 0px;
+}
+
+.formacao-container::after {
+  content: "";
+  display: block;
+  height: 100px;
+  width: 130px;
+  background: url(../img/detalhe.svg) no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+#p1 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .formacao h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important;
+  }
+
+  .formacao-descricao {
+    font-size: 1.25rem;
+  }
+
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .formacao h1 {
+    color: #fff;
+  }
+
+  #cursos-intensivos h3::before,
+  #cursos-idiomas h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .formacao-cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 60px 0px;
+  }
+
+  .formacao-item {
+    margin: 0px;
+  }
+}
